@@ -6,12 +6,17 @@ import { withTheme } from '~/providers/theme-provider';
 import withStyles from 'react-jss';
 import { styles } from './styles';
 
-const InputRaw = ({ className, classes, fluid, ...rest }) => (
+const InputRaw = ({ className, classes, fluid, invalid, ...rest }) => (
   <div className={styles.root}>
     <input
-      className={classnames(className, classes.input, {
-        [classes.fluid]: fluid,
-      })}
+      className={classnames(
+        className,
+        classes.input,
+        {
+          [classes.fluid]: fluid,
+        },
+        { [classes.invalid]: invalid },
+      )}
       {...dissoc('theme', rest)}
     />
   </div>
@@ -20,6 +25,7 @@ const InputRaw = ({ className, classes, fluid, ...rest }) => (
 InputRaw.propTypes = {
   className: PropTypes.string,
   fluid: PropTypes.bool,
+  invalid: PropTypes.bool,
   classes: PropTypes.object,
 };
 

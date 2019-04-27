@@ -2,7 +2,8 @@ import chroma from 'chroma-js';
 
 export const styles = {
   button: {
-    padding: '.57rem 1.1rem',
+    height: (props) => props.theme.sizes.elementHeight,
+    padding: '0 1.1rem',
     display: 'flex',
     alignItems: 'center',
     background: (props) => props.theme.colors.contrast_maximum,

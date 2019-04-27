@@ -14,4 +14,8 @@ withDefaultDecorator(() => {
   inputStories.add('Input fluid', () => (
     <Input type="text" placeholder="Enter some text" fluid />
   ));
+
+  inputStories.add('Input invalid', () => (
+    <Input type="text" invalid placeholder="Enter some text" />
+  ));
 });
