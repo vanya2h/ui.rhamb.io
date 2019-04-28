@@ -1,20 +1,19 @@
 import chroma from 'chroma-js';
 
-export const styles = {
+export const styles = (theme) => ({
   input: {
     background: 'transparent',
-    height: (props) => props.theme.sizes.elementHeight,
-    border: (props) =>
-      `1px solid ${chroma(props.theme.colors.contrast).brighten(3)}`,
+    height: theme.sizes.elementHeight,
+    border: `1px solid ${chroma(theme.colors.contrast).brighten(3)}`,
     borderRadius: '27px',
     padding: '0 1rem',
     fontSize: '.9rem',
     outline: 'none',
     transition: '.2s all ease-in-out',
     '&:focus': {
-      borderColor: (props) => props.theme.colors.contrast,
+      borderColor: theme.colors.contrast,
       '&::placeholder': {
-        color: (props) => chroma(props.theme.colors.contrast).brighten(2),
+        color: chroma(theme.colors.contrast).brighten(2),
       },
     },
   },
@@ -22,10 +21,10 @@ export const styles = {
     width: '100%',
   },
   invalid: {
-    borderColor: (props) => chroma(props.theme.colors.danger).darken(1),
-    color: (props) => chroma(props.theme.colors.danger).darken(1),
+    borderColor: chroma(theme.colors.danger).darken(1),
+    color: chroma(theme.colors.danger).darken(1),
     '&:focus': {
-      color: (props) => props.theme.colors.contrast,
+      color: theme.colors.contrast,
     },
   },
-};
+});

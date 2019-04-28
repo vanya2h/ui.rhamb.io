@@ -1,9 +1,8 @@
 import React from 'react';
-import { compose, dissoc } from 'ramda';
+import { dissoc } from 'ramda';
 import PropTypes from 'prop-types';
 import { List } from '~/components/list';
 import classnames from 'classnames';
-import { withTheme } from '~/providers/theme-provider';
 import withStyles from 'react-jss';
 import { styles } from './styles';
 
@@ -22,12 +21,7 @@ VerticalMenuItemRaw.propTypes = {
   classes: PropTypes.object,
 };
 
-const enhanceVerticalMenuItem = compose(
-  withTheme,
-  withStyles(styles),
-);
-
-const VerticalMenuItem = enhanceVerticalMenuItem(VerticalMenuItemRaw);
+const VerticalMenuItem = withStyles(styles)(VerticalMenuItemRaw);
 
 const VerticalMenuRaw = ({ children, className, classes, ...rest }) => (
   <List
@@ -46,11 +40,6 @@ VerticalMenuRaw.propTypes = {
   theme: PropTypes.any,
 };
 
-const enhance = compose(
-  withTheme,
-  withStyles(styles),
-);
-
-export const VerticalMenu = enhance(VerticalMenuRaw);
+export const VerticalMenu = withStyles(styles)(VerticalMenuRaw);
 
 VerticalMenu.Item = VerticalMenuItem;

@@ -1,8 +1,7 @@
 import React from 'react';
-import { compose, dissoc } from 'ramda';
+import { dissoc } from 'ramda';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { withTheme } from '~/providers/theme-provider';
 import withStyles from 'react-jss';
 import { styles } from './styles';
 
@@ -44,9 +43,4 @@ ParagraphRaw.propTypes = {
   theme: PropTypes.any,
 };
 
-const enhance = compose(
-  withTheme,
-  withStyles(styles),
-);
-
-export const Paragraph = enhance(ParagraphRaw);
+export const Paragraph = withStyles(styles)(ParagraphRaw);

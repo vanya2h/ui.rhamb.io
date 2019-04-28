@@ -2,25 +2,22 @@ import React from 'react';
 import { dissoc } from 'ramda';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import withStyles from 'react-jss';
-import { styles } from './styles';
 
-export const LinkRaw = ({ children, className, classes, ...rest }) => {
+export const CodeRaw = ({ children, className, classes, ...rest }) => {
   return (
-    <a
-      className={classnames(classes.link, className)}
+    <code
+      className={classnames(className, classes.code)}
       {...dissoc('theme', rest)}
     >
       {children}
-    </a>
+    </code>
   );
 };
 
-LinkRaw.propTypes = {
+CodeRaw.propTypes = {
   children: PropTypes.any,
+  as: PropTypes.string,
   className: PropTypes.string,
   classes: PropTypes.object,
   theme: PropTypes.any,
 };
-
-export const Link = withStyles(styles)(LinkRaw);

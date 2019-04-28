@@ -1,5 +1,5 @@
 export const styles = {
-  horizontalMenu: {
+  list: {
     listStyleType: 'none',
     padding: 0,
     margin: 0,

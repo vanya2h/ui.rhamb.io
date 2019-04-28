@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import { dissoc, compose } from 'ramda';
-import { withTheme } from '~/providers/theme-provider';
+import { dissoc } from 'ramda';
 import withStyles from 'react-jss';
 import { styles } from './styles';
 
@@ -29,9 +28,4 @@ InputRaw.propTypes = {
   classes: PropTypes.object,
 };
 
-const enhance = compose(
-  withTheme,
-  withStyles(styles),
-);
-
-export const Input = enhance(InputRaw);
+export const Input = withStyles(styles)(InputRaw);

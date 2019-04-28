@@ -1,62 +1,39 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
+import withStyles, { ThemeProvider as JSSThemeProvider } from 'react-jss';
 import PropTypes from 'prop-types';
 
 export const themeContext = React.createContext({
   changeTheme: null,
 });
 
-export class ThemeProvider extends React.PureComponent {
-  constructor(props) {
-    super(props);
+export const ThemeProvider = ({ themes, defaultTheme, children, ...rest }) => {
+  const [themeKey, changeThemeKey] = useState(defaultTheme);
+  const [currentTheme, setCurrentTheme] = useState(themes[themeKey]);
 
-    this.state = {
-      theme: props.defaultTheme,
-    };
-  }
+  useEffect(() => {
+    setCurrentTheme(themes[themeKey]);
+  }, [themeKey]);
 
-  componentDidMount() {
-    const { onMount } = this.props;
-
-    if (typeof onMount === 'function') {
-      onMount();
-    }
-  }
-
-  changeTheme = (nextThemeKey) => {
-    this.setState({
-      theme: nextThemeKey,
-    });
-  };
-
-  render() {
-    const currentTheme = this.props.themes[this.state.theme];
-
-    if (!currentTheme) {
-      return null;
-    }
-
-    return (
+  return (
+    <JSSThemeProvider theme={currentTheme}>
       <themeContext.Provider
         value={{
-          ...currentTheme,
-          changeTheme: this.changeTheme,
+          themes,
+          changeThemeKey,
         }}
       >
-        {this.props.children}
+        {React.createElement(
+          withStyles(currentTheme.globalStyles)(() =>
+            React.cloneElement(children, rest),
+          ),
+        )}
       </themeContext.Provider>
-    );
-  }
-}
+    </JSSThemeProvider>
+  );
+};
 
 ThemeProvider.propTypes = {
   themes: PropTypes.object.isRequired,
   defaultTheme: PropTypes.string.isRequired,
-  onMount: PropTypes.func,
   children: PropTypes.any.isRequired,
 };
-
-export const withTheme = (Component) => (props) => (
-  <themeContext.Consumer>
-    {(theme) => <Component theme={theme} {...props} />}
-  </themeContext.Consumer>
-);

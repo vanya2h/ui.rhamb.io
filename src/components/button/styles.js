@@ -1,31 +1,33 @@
 import chroma from 'chroma-js';
 
-export const styles = {
+export const styles = (theme) => ({
   button: {
-    height: (props) => props.theme.sizes.elementHeight,
+    height: theme.sizes.elementHeight,
     padding: '0 1.1rem',
     display: 'flex',
     alignItems: 'center',
-    background: (props) => props.theme.colors.contrast_maximum,
-    color: (props) => props.theme.colors.basic,
+    background: theme.colors.contrast_maximum,
+    color: theme.colors.basic,
     borderRadius: '26px',
-    border: (props) => `1px solid ${props.theme.colors.contrast_maximum}`,
+    border: `1px solid ${theme.colors.contrast_maximum}`,
     transition: '.2s all ease-in-out',
     outline: 'none',
     cursor: 'pointer',
     fontSize: '0.85rem',
     '&:hover': {
-      background: (props) =>
-        chroma(props.theme.colors.contrast_maximum).brighten(0.5),
-      borderColor: (props) =>
-        chroma(props.theme.colors.contrast_maximum).brighten(0.5),
+      background: `rgba(${chroma(theme.colors.contrast_maximum)
+        .brighten(0.5)
+        .rgba()})`,
+      borderColor: `rgba(${chroma(theme.colors.contrast_maximum)
+        .brighten(0.5)
+        .rgba()})`,
       '& $arrow': {
         marginLeft: '10px',
       },
     },
     '&:active': {
-      background: (props) => props.theme.colors.contrast_maximum,
-      color: (props) => props.theme.colors.basic,
+      background: theme.colors.contrast_maximum,
+      color: theme.colors.basic,
     },
   },
   arrow: {
@@ -39,27 +41,32 @@ export const styles = {
   },
   accent: {
     '&$button': {
-      background: (props) => props.theme.colors.accent,
-      borderColor: (props) => props.theme.colors.accent,
-      color: (props) => props.theme.colors.basic,
+      background: theme.colors.accent,
+      borderColor: theme.colors.accent,
+      color: theme.colors.basic,
       '&:hover': {
-        background: (props) => chroma(props.theme.colors.accent).darken(0.5),
-        borderColor: (props) => chroma(props.theme.colors.accent).darken(0.5),
+        background: `rgba(${chroma(theme.colors.accent)
+          .darken(0.5)
+          .rgba()})`,
+        borderColor: `rgba(${chroma(theme.colors.accent)
+          .darken(0.5)
+          .rgba()})`,
       },
     },
     '&$button$ghost': {
-      color: (props) => props.theme.colors.accent,
-      borderColor: (props) => props.theme.colors.accent,
+      color: theme.colors.accent,
+      borderColor: theme.colors.accent,
       background: 'transparent',
     },
   },
   ghost: {
     '&$button': {
       background: 'transparent',
-      color: (props) => props.theme.colors.contrast,
+      color: theme.colors.contrast,
       '&:hover': {
-        color: (props) => props.theme.colors.basic,
+        color: theme.colors.basic,
+        background: theme.colors.contrast_maximum,
       },
     },
   },
-};
+});

@@ -2,38 +2,31 @@ import React from 'react';
 import { dissoc } from 'ramda';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import withStyles from 'react-jss';
-import { styles } from './styles';
 
-export const TextRaw = ({
+export const ListRaw = ({
+  numbered,
   children,
-  as,
   className,
   classes,
-  light,
   ...rest
 }) => {
-  const element = as || 'span';
+  const element = numbered ? 'ol' : 'ul';
 
   return React.createElement(
     element,
     {
-      className: classnames(className, classes.text, {
-        [classes.light]: light,
-      }),
+      className: classnames(className, classes.list),
       ...dissoc('theme', rest),
     },
     children,
   );
 };
 
-TextRaw.propTypes = {
+ListRaw.propTypes = {
   children: PropTypes.any,
   as: PropTypes.string,
-  light: PropTypes.bool,
   className: PropTypes.string,
   classes: PropTypes.object,
   theme: PropTypes.any,
+  numbered: PropTypes.bool,
 };
-
-export const Text = withStyles(styles)(TextRaw);

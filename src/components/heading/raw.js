@@ -2,24 +2,23 @@ import React from 'react';
 import { dissoc } from 'ramda';
 import PropTypes from 'prop-types';
 import classnames from 'classnames';
-import withStyles from 'react-jss';
-import { styles } from './styles';
 
-export const TextRaw = ({
+export const HeadingRaw = ({
   children,
   as,
   className,
   classes,
-  light,
+  mega,
+  size,
   ...rest
 }) => {
-  const element = as || 'span';
+  const element = as || 'h1';
 
   return React.createElement(
     element,
     {
-      className: classnames(className, classes.text, {
-        [classes.light]: light,
+      className: classnames(className, classes.heading, classes[size], {
+        [classes.mega]: mega,
       }),
       ...dissoc('theme', rest),
     },
@@ -27,13 +26,12 @@ export const TextRaw = ({
   );
 };
 
-TextRaw.propTypes = {
+HeadingRaw.propTypes = {
   children: PropTypes.any,
   as: PropTypes.string,
-  light: PropTypes.bool,
+  size: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   className: PropTypes.string,
   classes: PropTypes.object,
   theme: PropTypes.any,
+  mega: PropTypes.bool,
 };
-
-export const Text = withStyles(styles)(TextRaw);
