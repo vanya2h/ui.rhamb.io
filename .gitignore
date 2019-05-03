@@ -3,7 +3,6 @@
 .DS_Store
 
 # Build
-build/
 storybook-static/
 lib/
 
