@@ -16,7 +16,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "eslint": "npx eslint ./"
+    "eslint": "npx eslint ./",
+    "prebuild": "rimraf ./build",
+    "build": "npm run prebuild && NODE_ENV=production webpack",
+    "postinstall": "npm run build"
   },
   "homepage": "https://github.com/rhamb.io/rhamb-ui#readme",
   "keywords": [],
@@ -33,6 +36,7 @@
   },
   "dependencies": {
     "chroma-js": "^2.0.3",
+    "react-feather": "1.1.6",
     "react-jsonschema-form": "1.4.0"
   },
   "devDependencies": {
@@ -55,6 +59,11 @@
     "eslint-plugin-babel": "^5.3.0",
     "eslint-plugin-react": "^7.12.4",
     "ramda": "^0.26.1",
-    "react-jss": "8.6.1"
+    "react-jss": "8.6.1",
+    "rimraf": "2.6.3",
+    "uglifyjs-webpack-plugin": "2.1.2",
+    "webpack": "4.30.0",
+    "webpack-bundle-analyzer": "3.3.2",
+    "webpack-cli": "3.3.1"
   }
 }
