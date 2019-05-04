@@ -1,1 +1,6 @@
-export { themeContext, ThemeProvider } from './context';
+import { themeContext, ThemeProvider } from './context';
+
+export const theme = {
+  themeContext,
+  ThemeProvider,
+};

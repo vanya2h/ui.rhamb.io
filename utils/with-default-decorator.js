@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { addDecorator } from '@storybook/react';
-import { ThemeProvider } from '../src/providers/theme-provider';
+import { theme } from '../src/providers/theme-provider';
 import { defaultTheme } from '../src/themes/default';
 import helveticaNeueLight from '../src/assets/fonts/HelveticaNeueLight.woff';
 import helveticaNeueBold from '../src/assets/fonts/HelveticaNeueBold.woff';
@@ -25,14 +25,14 @@ const ComponentWithTheme = ({ createStories }) => {
   }, [0]);
 
   return (
-    <ThemeProvider
+    <theme.ThemeProvider
       defaultTheme="default"
       themes={{
         default: defaultTheme,
       }}
     >
       {createStories()}
-    </ThemeProvider>
+    </theme.ThemeProvider>
   );
 };
 

@@ -1,8 +1,5 @@
-import { themeContext, ThemeProvider } from './theme-provider';
+import { theme } from './theme-provider';
 
 export const providers = {
-  theme: {
-    themeContext,
-    ThemeProvider,
-  },
+  theme,
 };
