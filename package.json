@@ -1,6 +1,6 @@
 {
   "name": "ui.rhamb.io",
-  "version": "2.0.1",
+  "version": "2.1.1",
   "private": true,
   "description": "Rhamb.io UI library",
   "module": "./src/index.js",
