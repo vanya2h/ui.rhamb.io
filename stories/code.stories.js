@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { Code } from '~/components/code';
-import { Paragraph } from '~/components/paragraph';
+import { Code } from '../src/components/code';
+import { Paragraph } from '../src/components/paragraph';
 import { withDefaultDecorator } from '../utils/with-default-decorator';
 
 withDefaultDecorator(() => {

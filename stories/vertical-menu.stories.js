@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { VerticalMenu } from '~/components/vertical-menu';
-import { Link } from '~/components/link';
+import { VerticalMenu } from '../src/components/vertical-menu';
+import { Link } from '../src/components/link';
 import { withDefaultDecorator } from '../utils/with-default-decorator';
 
 withDefaultDecorator(() => {

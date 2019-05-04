@@ -2,10 +2,10 @@ import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import { addDecorator } from '@storybook/react';
-import { ThemeProvider } from '~/providers/theme-provider';
-import { defaultTheme } from '~/themes/default';
-import helveticaNeueLight from '~/assets/fonts/HelveticaNeueLight.woff';
-import helveticaNeueBold from '~/assets/fonts/HelveticaNeueBold.woff';
+import { ThemeProvider } from '../src/providers/theme-provider';
+import { defaultTheme } from '../src/themes/default';
+import helveticaNeueLight from '../src/assets/fonts/HelveticaNeueLight.woff';
+import helveticaNeueBold from '../src/assets/fonts/HelveticaNeueBold.woff';
 import { fontInjector } from '../src/business/font-injector';
 
 const helveticaFonts = [

@@ -1,7 +1,7 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { Paragraph } from '~/components/paragraph';
+import { Paragraph } from '../src/components/paragraph';
 import { withDefaultDecorator } from '../utils/with-default-decorator';
 
 withDefaultDecorator(() => {

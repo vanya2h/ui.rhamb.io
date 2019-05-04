@@ -1,9 +1,9 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { Button } from '~/components/button';
-import { List } from '~/components/list';
-import { Icon } from '~/components/icon';
+import { Button } from '../src/components/button';
+import { List } from '../src/components/list';
+import { Icon } from '../src/components/icon';
 import { withDefaultDecorator } from '../utils/with-default-decorator';
 
 withDefaultDecorator(() => {

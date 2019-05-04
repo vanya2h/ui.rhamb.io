@@ -1,7 +1,7 @@
 import React from 'react';
 import { dissoc } from 'ramda';
 import PropTypes from 'prop-types';
-import { List } from '~/components/list';
+import { List } from '../list';
 import classnames from 'classnames';
 
 export const HorizontalMenuRaw = ({

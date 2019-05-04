@@ -1,8 +1,8 @@
 import React from 'react';
 
 import { storiesOf } from '@storybook/react';
-import { HorizontalMenu } from '~/components/horizontal-menu';
-import { Link } from '~/components/link';
+import { HorizontalMenu } from '../src/components/horizontal-menu';
+import { Link } from '../src/components/link';
 import logoExample from './assets/logo-example.png';
 import { withDefaultDecorator } from '../utils/with-default-decorator';
 
