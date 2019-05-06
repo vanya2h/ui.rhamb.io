@@ -5,6 +5,7 @@ export { Heading } from './components/heading';
 export { HorizontalMenu } from './components/horizontal-menu';
 export { Icon } from './components/icon';
 export { Input } from './components/input';
+export { Container } from './components/container';
 export { Link } from './components/link';
 export { List } from './components/list';
 export { Paragraph } from './components/paragraph';
