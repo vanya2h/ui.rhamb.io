@@ -13,6 +13,12 @@ jobs:
           root: ~/repo
           paths:
             - .
+  test:
+    <<: *defaults
+    steps:
+      - testing:
+          at: ~/repo
+      - run: npm run test:lint
 
   build:
     <<: *defaults
@@ -46,9 +52,12 @@ workflows:
       - build:
           requires:
             - checkout_code
-      - release:
+      - test:
           requires:
             - build
+      - release:
+          requires:
+            - test
           filters:
             branches:
               only: master
