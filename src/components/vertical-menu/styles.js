@@ -1,10 +1,8 @@
-export const styles = {
+export const styles = (theme) => ({
   verticalMenu: {
+    extend: [theme.utils.flexbox.col, theme.utils.flexbox.ai_fs],
     listStyleType: 'none',
     padding: 0,
     margin: 0,
-    display: 'flex',
-    flexFlow: 'column',
-    alignItems: 'flex-start',
   },
-};
+});

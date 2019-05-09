@@ -2,10 +2,9 @@ import chroma from 'chroma-js';
 
 export const styles = (theme) => ({
   button: {
+    extend: [theme.utils.flexbox.row, theme.utils.flexbox.ai_c],
     height: theme.sizes.elementHeight,
     padding: '0 1.1rem',
-    display: 'flex',
-    alignItems: 'center',
     background: theme.colors.contrast_maximum,
     color: theme.colors.basic,
     borderRadius: '26px',
@@ -66,6 +65,7 @@ export const styles = (theme) => ({
       '&:hover': {
         color: theme.colors.basic,
         background: theme.colors.contrast_maximum,
+        borderColor: theme.colors.contrast_maximum,
       },
     },
   },
