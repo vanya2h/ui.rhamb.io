@@ -1,6 +1,7 @@
 # General files
 *~
 .DS_Store
+.env
 
 # Build
 storybook-static/

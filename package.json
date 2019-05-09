@@ -17,7 +17,8 @@
   "scripts": {
     "test:lint": "npx eslint ./src",
     "storybook": "start-storybook -p 6006",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "make-release": "semantic-release"
   },
   "lint-staged": {
     "linters": {
@@ -60,6 +61,11 @@
     "@babel/plugin-syntax-object-rest-spread": "^7.0.0",
     "@babel/preset-env": "^7.0.0",
     "@babel/preset-react": "^7.0.0",
+    "@semantic-release/changelog": "3.0.2",
+    "@semantic-release/commit-analyzer": "6.1.0",
+    "@semantic-release/git": "7.0.8",
+    "@semantic-release/github": "5.2.10",
+    "@semantic-release/release-notes-generator": "7.1.4",
     "@storybook/addon-actions": "^5.0.6",
     "@storybook/addon-links": "^5.0.6",
     "@storybook/addons": "^5.0.6",
@@ -76,6 +82,7 @@
     "prettier": "1.17.0",
     "ramda": "^0.26.1",
     "react-jss": "8.6.1",
+    "semantic-release": "15.13.12",
     "url-loader": "1.1.2"
   }
 }
