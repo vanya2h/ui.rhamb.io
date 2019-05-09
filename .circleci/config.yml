@@ -16,8 +16,6 @@ jobs:
   test:
     <<: *defaults
     steps:
-      - testing:
-          at: ~/repo
       - run: npm run test:lint
 
   build:
