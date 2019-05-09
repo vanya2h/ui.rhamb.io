@@ -11,11 +11,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/rhamb.io/rhamb-ui.git"
+    "url": "git+https://github.com/kv9991/ui.rhamb.io.git"
   },
   "author": "Ivan Mayers<beatzhitta@gmail.com>",
   "scripts": {
-    "test:lint": "npx eslint ./src",
+    "test:lint": "eslint ./src",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "semantic-release": "semantic-release"
@@ -26,15 +26,12 @@
         "prettier --write",
         "git add"
       ]
-    },
-    "ignore": [
-      "./build/**"
-    ]
+    }
   },
-  "homepage": "https://github.com/rhamb.io/rhamb-ui#readme",
+  "homepage": "https://github.com/kv9991/ui.rhamb.io#readme",
   "keywords": [],
   "bugs": {
-    "url": "https://github.com/rhamb.io/rhamb-ui/issues"
+    "url": "https://github.com/kv9991/ui.rhamb.io/issues"
   },
   "license": "Apache-2.0",
   "peerDependencies": {
@@ -65,6 +62,7 @@
     "@semantic-release/commit-analyzer": "6.1.0",
     "@semantic-release/git": "7.0.8",
     "@semantic-release/github": "5.2.10",
+    "@semantic-release/npm": "5.1.7",
     "@semantic-release/release-notes-generator": "7.1.4",
     "@storybook/addon-actions": "^5.0.6",
     "@storybook/addon-links": "^5.0.6",
