@@ -1,3 +1,10 @@
+## [1.1.1](https://github.com/kv9991/ui.rhamb.io/compare/v1.1.0...v1.1.1) (2019-05-09)
+
+
+### Bug Fixes
+
+* **components:** Fixed container component styles ([8df0da4](https://github.com/kv9991/ui.rhamb.io/commit/8df0da4))
+
 # [1.1.0](https://github.com/kv9991/ui.rhamb.io/compare/v1.0.0...v1.1.0) (2019-05-09)
 
 
