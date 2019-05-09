@@ -18,4 +18,26 @@ withDefaultDecorator(() => {
       </Paragraph>
     </Container>
   ));
+
+  containerStories.add('Fluid container', () => (
+    <Container fluid>
+      <Paragraph>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        excepturi veritatis cupiditate adipisci maxime autem reiciendis corporis
+        eveniet cum eum voluptas pariatur libero, veniam natus voluptatum eaque,
+        possimus eligendi dignissimos?
+      </Paragraph>
+    </Container>
+  ));
+
+  containerStories.add('Text container', () => (
+    <Container text>
+      <Paragraph>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam
+        excepturi veritatis cupiditate adipisci maxime autem reiciendis corporis
+        eveniet cum eum voluptas pariatur libero, veniam natus voluptatum eaque,
+        possimus eligendi dignissimos?
+      </Paragraph>
+    </Container>
+  ));
 });
