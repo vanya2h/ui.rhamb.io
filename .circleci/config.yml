@@ -16,7 +16,9 @@ jobs:
   test:
     <<: *defaults
     steps:
-      - run: npm run test:lint
+      - attach_workspace:
+          at: ~/repo
+      - run: npm run test:lint 
 
   build:
     <<: *defaults
