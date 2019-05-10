@@ -1,3 +1,10 @@
+## [1.2.2](https://github.com/kv9991/ui.rhamb.io/compare/v1.2.1...v1.2.2) (2019-05-10)
+
+
+### Bug Fixes
+
+* **Button:** New styles ([d8246d1](https://github.com/kv9991/ui.rhamb.io/commit/d8246d1))
+
 ## [1.2.1](https://github.com/kv9991/ui.rhamb.io/compare/v1.2.0...v1.2.1) (2019-05-10)
 
 
