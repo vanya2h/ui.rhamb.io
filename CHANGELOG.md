@@ -1,3 +1,10 @@
+# [1.2.0](https://github.com/kv9991/ui.rhamb.io/compare/v1.1.1...v1.2.0) (2019-05-10)
+
+
+### Features
+
+* New eslint config & code base rework ([cdc5cac](https://github.com/kv9991/ui.rhamb.io/commit/cdc5cac))
+
 ## [1.1.1](https://github.com/kv9991/ui.rhamb.io/compare/v1.1.0...v1.1.1) (2019-05-09)
 
 
