@@ -8,8 +8,8 @@ export const styles = (theme) => ({
       .brighten(3)
       .rgba()})`,
     borderRadius: '27px',
-    padding: '0 1rem',
-    fontSize: '.9rem',
+    padding: '0 1.5rem',
+    fontSize: '.92rem',
     outline: 'none',
     transition: '.2s all ease-in-out',
     '&:focus': {

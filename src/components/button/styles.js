@@ -4,7 +4,7 @@ export const styles = (theme) => ({
   button: {
     extend: [theme.utils.flexbox.row, theme.utils.flexbox.ai_c],
     height: theme.sizes.elementHeight,
-    padding: '0 1.1rem',
+    padding: '0 1.5rem',
     background: theme.colors.contrast_maximum,
     color: theme.colors.basic,
     borderRadius: '26px',
