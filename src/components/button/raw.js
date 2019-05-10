@@ -48,7 +48,7 @@ ButtonRaw.propTypes = {
 
 ButtonRaw.defaultProps = {
   type: 'button',
-  accent: 'false',
+  accent: false,
   icon: null,
   arrowed: false,
   ghost: false,
