@@ -1,3 +1,10 @@
+## [1.2.1](https://github.com/kv9991/ui.rhamb.io/compare/v1.2.0...v1.2.1) (2019-05-10)
+
+
+### Bug Fixes
+
+* **Button:** Fixing default props ([7d538ab](https://github.com/kv9991/ui.rhamb.io/commit/7d538ab))
+
 # [1.2.0](https://github.com/kv9991/ui.rhamb.io/compare/v1.1.1...v1.2.0) (2019-05-10)
 
 
