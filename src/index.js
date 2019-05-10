@@ -8,6 +8,7 @@ export { Input } from './components/input';
 export { Container } from './components/container';
 export { Link } from './components/link';
 export { List } from './components/list';
+export { Spinner } from './components/spinner';
 export { Paragraph } from './components/paragraph';
 export { Text } from './components/text';
 export { VerticalMenu } from './components/vertical-menu';

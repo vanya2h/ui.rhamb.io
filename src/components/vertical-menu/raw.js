@@ -4,30 +4,21 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { List } from '../list';
 
-export const HorizontalMenuRaw = ({
-  children,
-  className,
-  classes,
-  as,
-  ...rest
-}) => (
+export const VerticalMenuRaw = ({ children, className, classes, ...rest }) => (
   <List
     className={classnames(className, classes.list)}
-    as={as}
     {...dissoc('theme', rest)}
   >
     {children}
   </List>
 );
 
-HorizontalMenuRaw.propTypes = {
+VerticalMenuRaw.propTypes = {
   children: PropTypes.any.isRequired,
-  as: PropTypes.string,
-  className: PropTypes.string,
   classes: PropTypes.object.isRequired,
+  className: PropTypes.string,
 };
 
-HorizontalMenuRaw.defaultProps = {
-  as: null,
+VerticalMenuRaw.defaultProps = {
   className: null,
 };

@@ -1,5 +1,5 @@
 export const styles = {
-  list: {
+  root: {
     fontSize: '1rem',
   },
 };

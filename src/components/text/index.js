@@ -13,10 +13,8 @@ export const TextRaw = ({
   light,
   ...rest
 }) => {
-  const element = as || 'span';
-
   return React.createElement(
-    element,
+    as,
     {
       className: classnames(className, classes.text, {
         [classes.light]: light,
@@ -28,12 +26,17 @@ export const TextRaw = ({
 };
 
 TextRaw.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
+  classes: PropTypes.object.isRequired,
   as: PropTypes.string,
   light: PropTypes.bool,
   className: PropTypes.string,
-  classes: PropTypes.object,
-  theme: PropTypes.any,
+};
+
+TextRaw.defaultProps = {
+  as: 'span',
+  light: false,
+  className: null,
 };
 
 export const Text = withStyles(styles)(TextRaw);

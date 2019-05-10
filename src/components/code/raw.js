@@ -15,9 +15,11 @@ export const CodeRaw = ({ children, className, classes, ...rest }) => {
 };
 
 CodeRaw.propTypes = {
-  children: PropTypes.any,
-  as: PropTypes.string,
+  children: PropTypes.any.isRequired,
   className: PropTypes.string,
-  classes: PropTypes.object,
-  theme: PropTypes.any,
+  classes: PropTypes.object.isRequired,
+};
+
+CodeRaw.defaultProps = {
+  className: null,
 };

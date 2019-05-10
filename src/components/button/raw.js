@@ -11,10 +11,13 @@ export const ButtonRaw = ({
   arrowed,
   accent,
   ghost,
+  type,
   ...rest
 }) => {
   return (
+    // eslint-disable-next-line react/button-has-type
     <button
+      type={type}
       className={classnames(
         classes.button,
         className,
@@ -34,10 +37,20 @@ export const ButtonRaw = ({
 
 ButtonRaw.propTypes = {
   children: PropTypes.any.isRequired,
-  classes: PropTypes.object,
+  type: PropTypes.oneOf(['button', 'submit', 'reset']),
+  classes: PropTypes.object.isRequired,
   accent: PropTypes.bool,
   icon: PropTypes.any,
   arrowed: PropTypes.bool,
   ghost: PropTypes.bool,
   className: PropTypes.string,
+};
+
+ButtonRaw.defaultProps = {
+  type: 'button',
+  accent: 'false',
+  icon: null,
+  arrowed: false,
+  ghost: false,
+  className: null,
 };

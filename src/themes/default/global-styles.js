@@ -15,9 +15,9 @@ export const globalStyles = (theme) => ({
       color: theme.colors.contrast_maximum,
     },
     '::placeholder': {
-      color: chroma(theme.colors.contrast)
+      color: `rgba(${chroma(theme.colors.contrast)
         .alpha(0.4)
-        .hex(),
+        .rgba()})`,
     },
     'h1, h2, h3, h4, h5, h6, p': {
       margin: 0,
@@ -27,9 +27,9 @@ export const globalStyles = (theme) => ({
       display: 'inline-block',
       transition: '.15s all ease-in',
       outline: 'none',
-      color: chroma(theme.colors.contrast)
+      color: `rgba(${chroma(theme.colors.contrast)
         .alpha(0.8)
-        .hex(),
+        .rgba()})`,
     },
     'a:hover': {
       color: theme.colors.contrast,

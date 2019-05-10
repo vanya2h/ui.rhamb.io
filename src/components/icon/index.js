@@ -279,5 +279,5 @@ Icon.propTypes = {
     'Zap',
     'ZoomIn',
     'ZoomOut',
-  ]),
+  ]).isRequired,
 };

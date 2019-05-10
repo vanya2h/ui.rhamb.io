@@ -12,10 +12,8 @@ export const HeadingRaw = ({
   size,
   ...rest
 }) => {
-  const element = as || 'h1';
-
   return React.createElement(
-    element,
+    as,
     {
       className: classnames(className, classes.heading, classes[size], {
         [classes.mega]: mega,
@@ -27,11 +25,17 @@ export const HeadingRaw = ({
 };
 
 HeadingRaw.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
+  classes: PropTypes.object.isRequired,
   as: PropTypes.string,
   size: PropTypes.oneOf(['h1', 'h2', 'h3', 'h4', 'h5', 'h6']),
   className: PropTypes.string,
-  classes: PropTypes.object,
-  theme: PropTypes.any,
   mega: PropTypes.bool,
+};
+
+HeadingRaw.defaultProps = {
+  as: 'h1',
+  size: 'h1',
+  mega: false,
+  className: null,
 };

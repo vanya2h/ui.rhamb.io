@@ -13,7 +13,7 @@ export const ContainerRaw = ({
   ...rest
 }) => {
   return React.createElement(
-    as || 'div',
+    as,
     {
       className: classnames(className, classes.container, {
         [classes.container_fluid]: fluid,
@@ -26,10 +26,17 @@ export const ContainerRaw = ({
 };
 
 ContainerRaw.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
   as: PropTypes.string,
   text: PropTypes.bool,
   className: PropTypes.string,
-  classes: PropTypes.object,
+  classes: PropTypes.object.isRequired,
   fluid: PropTypes.bool,
+};
+
+ContainerRaw.defaultProps = {
+  as: 'div',
+  text: false,
+  className: null,
+  fluid: false,
 };

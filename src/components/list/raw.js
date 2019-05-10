@@ -15,7 +15,7 @@ export const ListRaw = ({
   return React.createElement(
     element,
     {
-      className: classnames(className, classes.list),
+      className: classnames(className, classes.root),
       ...dissoc('theme', rest),
     },
     children,
@@ -23,10 +23,13 @@ export const ListRaw = ({
 };
 
 ListRaw.propTypes = {
-  children: PropTypes.any,
-  as: PropTypes.string,
+  children: PropTypes.any.isRequired,
+  classes: PropTypes.object.isRequired,
   className: PropTypes.string,
-  classes: PropTypes.object,
-  theme: PropTypes.any,
   numbered: PropTypes.bool,
+};
+
+ListRaw.defaultProps = {
+  numbered: false,
+  className: null,
 };

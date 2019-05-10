@@ -1,29 +1,29 @@
 import React from 'react';
-import classnames from 'classnames';
-import { dissoc } from 'ramda';
 import PropTypes from 'prop-types';
+import { dissoc } from 'ramda';
+import classnames from 'classnames';
 import { List } from '../../list';
 
-export const HorizontalMenuItemRaw = ({
+export const VerticalMenuItemRaw = ({
   children,
   className,
   classes,
   ...rest
 }) => (
   <List.Item
-    className={classnames(className, classes.item)}
+    className={classnames(className, classes.root)}
     {...dissoc('theme', rest)}
   >
     {children}
   </List.Item>
 );
 
-HorizontalMenuItemRaw.propTypes = {
+VerticalMenuItemRaw.propTypes = {
   children: PropTypes.any.isRequired,
-  className: PropTypes.string,
   classes: PropTypes.object.isRequired,
+  className: PropTypes.string,
 };
 
-HorizontalMenuItemRaw.defaultProps = {
+VerticalMenuItemRaw.defaultProps = {
   className: null,
 };

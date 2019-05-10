@@ -14,10 +14,8 @@ export const ParagraphRaw = ({
   light,
   ...rest
 }) => {
-  const element = as || 'p';
-
   return React.createElement(
-    element,
+    as,
     {
       className: classnames(
         className,
@@ -34,13 +32,19 @@ export const ParagraphRaw = ({
 };
 
 ParagraphRaw.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
+  classes: PropTypes.object.isRequired,
   as: PropTypes.string,
   primary: PropTypes.bool,
   light: PropTypes.bool,
   className: PropTypes.string,
-  classes: PropTypes.object,
-  theme: PropTypes.any,
+};
+
+ParagraphRaw.defaultProps = {
+  as: 'p',
+  primary: false,
+  light: false,
+  className: null,
 };
 
 export const Paragraph = withStyles(styles)(ParagraphRaw);

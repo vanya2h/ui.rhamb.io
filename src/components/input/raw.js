@@ -3,31 +3,29 @@ import PropTypes from 'prop-types';
 import classnames from 'classnames';
 import { dissoc } from 'ramda';
 
-const FieldRaw = ({ className, classes, fluid, invalid, ...rest }) => (
+export const InputRaw = ({ className, classes, fluid, invalid, ...rest }) => (
   <input
     className={classnames(
       className,
       classes.input,
       {
-        [classes.fluid]: fluid,
+        [classes.input_fluid]: fluid,
       },
-      { [classes.invalid]: invalid },
+      { [classes.input_invalid]: invalid },
     )}
     {...dissoc('theme', rest)}
   />
 );
 
-FieldRaw.propTypes = {
+InputRaw.propTypes = {
+  classes: PropTypes.object.isRequired,
   className: PropTypes.string,
   fluid: PropTypes.bool,
   invalid: PropTypes.bool,
-  classes: PropTypes.object.isRequired,
 };
 
-FieldRaw.defaultProps = {
+InputRaw.defaultProps = {
   className: null,
   fluid: false,
   invalid: false,
 };
-
-export const Field = FieldRaw;

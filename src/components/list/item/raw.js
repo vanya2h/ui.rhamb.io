@@ -16,6 +16,10 @@ export const ListItemRaw = ({ children, className, classes, ...rest }) => {
 
 ListItemRaw.propTypes = {
   children: PropTypes.any.isRequired,
-  classes: PropTypes.object,
+  classes: PropTypes.object.isRequired,
   className: PropTypes.string,
+};
+
+ListItemRaw.defaultProps = {
+  className: null,
 };

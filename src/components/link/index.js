@@ -17,10 +17,13 @@ export const LinkRaw = ({ children, className, classes, ...rest }) => {
 };
 
 LinkRaw.propTypes = {
-  children: PropTypes.any,
+  children: PropTypes.any.isRequired,
+  classes: PropTypes.object.isRequired,
   className: PropTypes.string,
-  classes: PropTypes.object,
-  theme: PropTypes.any,
+};
+
+LinkRaw.defaultProps = {
+  className: null,
 };
 
 export const Link = withStyles(styles)(LinkRaw);
