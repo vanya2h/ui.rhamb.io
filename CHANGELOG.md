@@ -1,3 +1,10 @@
+## [1.4.1](https://github.com/kv9991/ui.rhamb.io/compare/v1.4.0...v1.4.1) (2019-05-11)
+
+
+### Bug Fixes
+
+* **Grid:** Small bugfix ([97961ed](https://github.com/kv9991/ui.rhamb.io/commit/97961ed))
+
 # [1.4.0](https://github.com/kv9991/ui.rhamb.io/compare/v1.3.1...v1.4.0) (2019-05-11)
 
 
