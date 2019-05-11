@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/kv9991/ui.rhamb.io/compare/v1.3.0...v1.3.1) (2019-05-11)
+
+
+### Bug Fixes
+
+* Expose grid component ([66405e1](https://github.com/kv9991/ui.rhamb.io/commit/66405e1))
+
 # [1.3.0](https://github.com/kv9991/ui.rhamb.io/compare/v1.2.2...v1.3.0) (2019-05-11)
 
 
