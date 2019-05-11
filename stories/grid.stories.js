@@ -11,16 +11,7 @@ withDefaultDecorator(() => {
   gridStories.add('Basic grid', () => (
     <Container>
       <Grid>
-        <Grid.Row
-          options={{
-            mobile: {
-              reverse: true,
-            },
-            desktop: {
-              reverse: false,
-            },
-          }}
-        >
+        <Grid.Row>
           <Grid.Column
             options={{
               mobile: {

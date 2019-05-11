@@ -14,7 +14,7 @@ export const RowRaw = ({
 }) => {
   const point = useActualBreakpoint(theme, options);
 
-  const flexDirection = options[point].reverse && 'row-reverse';
+  const flexDirection = point && options[point].reverse && 'row-reverse';
 
   return (
     <div
