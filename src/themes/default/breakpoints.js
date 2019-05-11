@@ -5,8 +5,7 @@ const gridRanges = {
   tv: [1200, 10 ** 5],
 };
 
-const generateQuery = (point) =>
-  `(min-width: ${point[0]}px) and (max-width: ${point[1]}px)`;
+const generateQuery = (point) => `(min-width: ${point[0]}px)`;
 
 const generateBreakpoints = (ranges) => {
   const breakpoints = {};

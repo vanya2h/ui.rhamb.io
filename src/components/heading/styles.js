@@ -1,41 +1,38 @@
-export const styles = {
-  h1: {
-    fontSize: '3rem',
+const levelsCount = 6;
+
+const generateLevel = (theme, ratio) => {
+  const realRatio = levelsCount - ratio;
+
+  return {
+    fontSize: `${0.2 * realRatio + 0.85}rem`,
     '&$mega': {
-      fontSize: '4rem',
+      fontSize: `${0.2 * realRatio + 1}rem`,
     },
-  },
-  h2: {
-    fontSize: '2.4rem',
-    '&$mega': {
-      fontSize: '3.2rem',
+    [`@media screen and ${theme.breakpoints.tablet}`]: {
+      fontSize: `${0.225 * realRatio + 0.95}rem`,
+      '&$mega': {
+        fontSize: `${0.225 * realRatio + 1.1}rem`,
+      },
     },
-  },
-  h3: {
-    fontSize: '1.8rem',
-    '&$mega': {
-      fontSize: '2.6rem',
+    [`@media screen and ${theme.breakpoints.desktop}`]: {
+      fontSize: `${0.25 * realRatio + 1.1}rem`,
+      '&$mega': {
+        fontSize: `${0.25 * realRatio + 1.2}rem`,
+      },
     },
-  },
-  h4: {
-    fontSize: '1.5rem',
-    '&$mega': {
-      fontSize: '2.25rem',
+  };
+};
+
+export const styles = (theme) => {
+  const result = {
+    mega: {
+      fontWeight: '300',
     },
-  },
-  h5: {
-    fontSize: '1.25rem',
-    '&$mega': {
-      fontSize: '1.6rem',
-    },
-  },
-  h6: {
-    fontSize: '1rem',
-    '&$mega': {
-      fontSize: '1.2rem',
-    },
-  },
-  mega: {
-    fontWeight: '300',
-  },
+  };
+
+  for (let i = 1; i <= levelsCount; i += 1) {
+    result[`h${i}`] = generateLevel(theme, i);
+  }
+
+  return result;
 };

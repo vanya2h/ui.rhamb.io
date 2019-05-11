@@ -1,11 +1,11 @@
 const isSmallestRange = (ranges, target) =>
-  Object.values(ranges).every((range) => range[0] > target[0]);
+  Object.values(ranges).every((range) => range[0] > ranges[target][0]);
 
 const generateResponsiveStyles = (ranges) => {
   const result = {};
 
   Object.keys(ranges).forEach((range) => {
-    if (isSmallestRange(ranges, ranges[range])) {
+    if (isSmallestRange(ranges, range)) {
       result[
         `@media only screen and (min-width: ${
           ranges[range][0]
@@ -17,7 +17,7 @@ const generateResponsiveStyles = (ranges) => {
         },
       };
     } else {
-      const optimalWidth = ranges[range][0] - 50;
+      const optimalWidth = ranges[range][0] - 100;
 
       result[
         `@media only screen and (min-width: ${
@@ -40,8 +40,8 @@ export const styles = (theme) => ({
     display: 'block',
     maxWidth: '100%',
     margin: '0 auto',
-    paddingLeft: '1rem',
-    paddingRight: '1rem',
+    paddingLeft: '1.5rem',
+    paddingRight: '1.5rem',
   },
   container_fluid: {
     width: '100% !important',
