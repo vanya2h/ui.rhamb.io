@@ -1,3 +1,12 @@
+# [1.4.0](https://github.com/kv9991/ui.rhamb.io/compare/v1.3.1...v1.4.0) (2019-05-11)
+
+
+### Features
+
+* **Grid:** Grid option-system rework (BREAKING CHANGE) ([6cfffc5](https://github.com/kv9991/ui.rhamb.io/commit/6cfffc5))
+* **Heading:** Added responsive system ([98783cd](https://github.com/kv9991/ui.rhamb.io/commit/98783cd))
+* **Paragraph, Text:** Added responsive system ([6a3cb3e](https://github.com/kv9991/ui.rhamb.io/commit/6a3cb3e))
+
 ## [1.3.1](https://github.com/kv9991/ui.rhamb.io/compare/v1.3.0...v1.3.1) (2019-05-11)
 
 
