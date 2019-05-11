@@ -1,6 +1,27 @@
+const gridRanges = {
+  mobile: [0, 768],
+  tablet: [769, 992],
+  desktop: [993, 1200],
+  tv: [1200, 10 ** 5],
+};
+
+const generateQuery = (point) =>
+  `(min-width: ${point[0]}px) and (max-width: ${point[1]}px)`;
+
+const generateBreakpoints = (ranges) => {
+  const breakpoints = {};
+
+  Object.keys(ranges).forEach((point) => {
+    if (ranges[point]) {
+      breakpoints[point] = generateQuery(ranges[point]);
+    }
+  });
+
+  return breakpoints;
+};
+
 export const breakpoints = {
-  mobile: '(max-width: 768px)',
-  tablet: '(min-width: 769px) and (max-width: 992px)',
-  desktop: '(min-width: 993px) and (max-width: 1200px)',
-  tv: '(min-width: 1200px)',
+  gridRanges,
+  gridColumnCount: 12,
+  ...generateBreakpoints(gridRanges),
 };

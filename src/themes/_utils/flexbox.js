@@ -3,9 +3,15 @@ export const flexbox = {
     display: 'flex',
     flexDirection: 'row',
   },
+  row_r: {
+    flexDirection: 'row-reverse',
+  },
   col: {
     display: 'flex',
     flexDirection: 'column',
+  },
+  col_r: {
+    flexDirection: 'column-reverse',
   },
   jc_sb: {
     justifyContent: 'space-between',

@@ -15,3 +15,4 @@ export { VerticalMenu } from './components/vertical-menu';
 export { defaultTheme } from './themes/default';
 export { theme } from './providers/theme-provider';
 export { fonts } from './assets/fonts';
+export { useActualBreakpoint } from './hooks/use-actual-breakpoint';

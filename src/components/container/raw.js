@@ -11,8 +11,8 @@ export const ContainerRaw = ({
   text,
   fluid,
   ...rest
-}) => {
-  return React.createElement(
+}) =>
+  React.createElement(
     as,
     {
       className: classnames(className, classes.container, {
@@ -23,7 +23,6 @@ export const ContainerRaw = ({
     },
     children,
   );
-};
 
 ContainerRaw.propTypes = {
   children: PropTypes.any.isRequired,
