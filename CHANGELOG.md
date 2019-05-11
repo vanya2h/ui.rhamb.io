@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/kv9991/ui.rhamb.io/compare/v1.2.2...v1.3.0) (2019-05-11)
+
+
+### Features
+
+* **Grid:** Added new grid system, Container enhancement ([be496d5](https://github.com/kv9991/ui.rhamb.io/commit/be496d5))
+
 ## [1.2.2](https://github.com/kv9991/ui.rhamb.io/compare/v1.2.1...v1.2.2) (2019-05-10)
 
 
