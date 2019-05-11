@@ -10,20 +10,21 @@ export const ColumnRaw = ({
   children,
   options,
   theme,
-  offset,
   ...rest
 }) => {
-  const point = useActualBreakpoint(theme);
+  const point = useActualBreakpoint(theme, options);
   const { gridColumnCount } = theme.breakpoints;
 
-  const width = options[point] / gridColumnCount;
-  const marginLeft = offset && (offset[point] || 0) / gridColumnCount;
+  const width = (options[point].width || 12) / gridColumnCount;
+  const marginLeft = (options[point].offset || 0) / gridColumnCount;
+  const order = options[point].order || 'unset';
 
   return (
     <div
       style={{
         width: `${width * 100}%`,
         marginLeft: `${marginLeft * 100}%`,
+        order,
       }}
       className={classnames(classes.column, className)}
       {...rest}
@@ -37,7 +38,6 @@ ColumnRaw.propTypes = {
   classes: PropTypes.object.isRequired,
   children: PropTypes.any.isRequired,
   options: PropTypes.object.isRequired,
-  offset: PropTypes.object.isRequired,
   theme: PropTypes.object.isRequired,
   className: PropTypes.string,
   reverse: PropTypes.bool,

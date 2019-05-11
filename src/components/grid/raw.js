@@ -1,10 +1,14 @@
 import React from 'react';
+import { dissoc } from 'ramda';
 import classnames from 'classnames';
 import PropTypes from 'prop-types';
 
 export const GridRaw = ({ classes, children, className, ...rest }) => {
   return (
-    <div className={classnames(classes.grid, className)} {...rest}>
+    <div
+      className={classnames(classes.grid, className)}
+      {...dissoc('theme', rest)}
+    >
       {children}
     </div>
   );

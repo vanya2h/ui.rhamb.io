@@ -1,17 +1,14 @@
 import { useState, useEffect } from 'react';
 
-const getActualBreakpoint = (ranges) => {
+const getBreakpoint = (ranges, options) => {
   const viewportWidth = window.innerWidth;
 
   let result;
 
   Object.keys(ranges).forEach((breakpoint) => {
-    if (result) return;
-
-    if (
-      ranges[breakpoint][0] < viewportWidth &&
-      viewportWidth < ranges[breakpoint][1]
-    ) {
+    if (!result && options[breakpoint]) {
+      result = breakpoint;
+    } else if (options[breakpoint] && viewportWidth > ranges[breakpoint][0]) {
       result = breakpoint;
     }
   });
@@ -19,13 +16,13 @@ const getActualBreakpoint = (ranges) => {
   return result;
 };
 
-export const useActualBreakpoint = (theme) => {
-  const [actualBreakpoint, setActualBreakpoint] = useState(
-    getActualBreakpoint(theme.breakpoints.gridRanges),
+export const useActualBreakpoint = (theme, options) => {
+  const [breakpoint, setBreakpoint] = useState(
+    getBreakpoint(theme.breakpoints.gridRanges, options),
   );
 
   const handleResize = () => {
-    setActualBreakpoint(getActualBreakpoint(theme.breakpoints.gridRanges));
+    setBreakpoint(getBreakpoint(theme.breakpoints.gridRanges, options));
   };
 
   useEffect(() => {
@@ -35,5 +32,5 @@ export const useActualBreakpoint = (theme) => {
     };
   }, []);
 
-  return actualBreakpoint;
+  return breakpoint;
 };

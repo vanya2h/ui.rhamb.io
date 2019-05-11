@@ -11,40 +11,43 @@ withDefaultDecorator(() => {
   gridStories.add('Basic grid', () => (
     <Container>
       <Grid>
-        <Grid.Row>
+        <Grid.Row
+          options={{
+            mobile: {
+              reverse: true,
+            },
+            desktop: {
+              reverse: false,
+            },
+          }}
+        >
           <Grid.Column
             options={{
-              mobile: 2,
-              tablet: 3,
-              desktop: 2,
-              tv: 1,
+              mobile: {
+                width: 6,
+              },
+              tv: {
+                width: 3,
+              },
             }}
           >
-            <div style={{ background: 'blue' }}>Hello world</div>
+            <div style={{ color: 'white', background: 'blue' }}>
+              This should be 1 on Desktop
+            </div>
           </Grid.Column>
           <Grid.Column
             options={{
-              mobile: 8,
-              tablet: 6,
-              desktop: 8,
-              tv: 10,
-            }}
-            offset={{
-              tv: 5,
-              mobile: 1,
+              mobile: {
+                width: 6,
+              },
+              tv: {
+                width: 3,
+              },
             }}
           >
-            <div style={{ background: 'blue' }}>Hello world</div>
-          </Grid.Column>
-          <Grid.Column
-            options={{
-              mobile: 2,
-              tablet: 3,
-              desktop: 2,
-              tv: 1,
-            }}
-          >
-            <div style={{ background: 'blue' }}>Hello world</div>
+            <div style={{ color: 'white', background: 'blue' }}>
+              This should be 1 on Mobile!
+            </div>
           </Grid.Column>
         </Grid.Row>
       </Grid>
