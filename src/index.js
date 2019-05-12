@@ -17,3 +17,4 @@ export { theme } from './providers/theme-provider';
 export { fonts } from './assets/fonts';
 export { useActualBreakpoint } from './hooks/use-actual-breakpoint';
 export { Grid } from './components/grid';
+export { ProgressiveRender } from './components/progressive-render';
