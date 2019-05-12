@@ -1,3 +1,10 @@
+# [1.5.0](https://github.com/kv9991/ui.rhamb.io/compare/v1.4.1...v1.5.0) (2019-05-12)
+
+
+### Features
+
+* **Progressive Render:** Added new component Progressive Render ([b5493ce](https://github.com/kv9991/ui.rhamb.io/commit/b5493ce))
+
 ## [1.4.1](https://github.com/kv9991/ui.rhamb.io/compare/v1.4.0...v1.4.1) (2019-05-11)
 
 
