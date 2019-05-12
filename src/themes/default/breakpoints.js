@@ -1,5 +1,6 @@
 const gridRanges = {
-  mobile: [0, 768],
+  handy: [0, 480],
+  mobile: [481, 768],
   tablet: [769, 992],
   desktop: [993, 1200],
   tv: [1200, 10 ** 5],

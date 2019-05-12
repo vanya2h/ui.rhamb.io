@@ -17,7 +17,7 @@ const generateResponsiveStyles = (ranges) => {
         },
       };
     } else {
-      const optimalWidth = ranges[range][0] - 100;
+      const optimalWidth = ranges[range][0] - 50;
 
       result[
         `@media only screen and (min-width: ${
