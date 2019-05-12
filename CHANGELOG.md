@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/kv9991/ui.rhamb.io/compare/v1.6.0...v1.6.1) (2019-05-12)
+
+
+### Bug Fixes
+
+* **theme:** Breakpoints changed ([7683711](https://github.com/kv9991/ui.rhamb.io/commit/7683711))
+
 # [1.6.0](https://github.com/kv9991/ui.rhamb.io/compare/v1.5.0...v1.6.0) (2019-05-12)
 
 
