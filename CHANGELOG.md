@@ -1,3 +1,10 @@
+# [1.6.0](https://github.com/kv9991/ui.rhamb.io/compare/v1.5.0...v1.6.0) (2019-05-12)
+
+
+### Features
+
+* **theme:** Added new breakpoint ([12eb5c2](https://github.com/kv9991/ui.rhamb.io/commit/12eb5c2))
+
 # [1.5.0](https://github.com/kv9991/ui.rhamb.io/compare/v1.4.1...v1.5.0) (2019-05-12)
 
 
