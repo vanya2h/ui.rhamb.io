@@ -11,6 +11,7 @@ export const ButtonRaw = ({
   arrowed,
   accent,
   ghost,
+  transparent,
   type,
   ...rest
 }) => {
@@ -21,10 +22,9 @@ export const ButtonRaw = ({
       className={classnames(
         classes.button,
         className,
-        {
-          [classes.accent]: accent,
-        },
+        { [classes.accent]: accent },
         { [classes.ghost]: ghost },
+        { [classes.transparent]: transparent },
       )}
       {...dissoc('theme', rest)}
     >
@@ -40,6 +40,7 @@ ButtonRaw.propTypes = {
   type: PropTypes.oneOf(['button', 'submit', 'reset']),
   classes: PropTypes.object.isRequired,
   accent: PropTypes.bool,
+  transparent: PropTypes.bool,
   icon: PropTypes.any,
   arrowed: PropTypes.bool,
   ghost: PropTypes.bool,
@@ -49,6 +50,7 @@ ButtonRaw.propTypes = {
 ButtonRaw.defaultProps = {
   type: 'button',
   accent: false,
+  transparent: false,
   icon: null,
   arrowed: false,
   ghost: false,

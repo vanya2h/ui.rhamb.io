@@ -69,4 +69,16 @@ export const styles = (theme) => ({
       },
     },
   },
+  transparent: {
+    '&$button': {
+      background: 'transparent',
+      color: theme.colors.contrast,
+      borderColor: 'transparent',
+      '&:hover': {
+        color: theme.colors.contrast_maximum,
+        background: '#eee',
+        borderColor: 'transparent',
+      },
+    },
+  },
 });
