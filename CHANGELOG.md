@@ -1,3 +1,10 @@
+# [1.7.0](https://github.com/kv9991/ui.rhamb.io/compare/v1.6.1...v1.7.0) (2019-05-20)
+
+
+### Features
+
+* **Button:** Added transparent style ([109f502](https://github.com/kv9991/ui.rhamb.io/commit/109f502))
+
 ## [1.6.1](https://github.com/kv9991/ui.rhamb.io/compare/v1.6.0...v1.6.1) (2019-05-12)
 
 
