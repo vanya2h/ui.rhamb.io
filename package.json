@@ -84,7 +84,7 @@
     "prettier": "1.17.0",
     "prettier-eslint": "8.8.2",
     "react-jss": "8.6.1",
-    "semantic-release": "15.13.12",
+    "semantic-release": "17.2.3",
     "url-loader": "1.1.2"
   }
 }
